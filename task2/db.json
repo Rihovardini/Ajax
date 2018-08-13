@@ -1,0 +1,62 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "first_name": "Sebastian",
+        "last_name": "Eschweiler",
+        "age":24,
+        "email": "sebastian@codingthesmartway.com"
+      },
+      {
+        "id": 2,
+        "first_name": "Steve",
+        "last_name": "Palmer",
+        "age":27,
+        "email": "steve@codingthesmartway.com"
+      },
+      {
+        "id": 3,
+        "first_name": "Ann",
+        "last_name": "Smith",
+        "age":34,
+        "email": "ann@codingthesmartway.com"
+      }
+    ],
+    "managers": [
+        {
+          "id": 1,
+          "first_name": "Bastian",
+          "last_name": "Weiler",
+          "email": "Bastian@codingthesmartway.com"
+        },
+        {
+          "id": 2,
+          "first_name": "SteveR",
+          "last_name": "PalmerS",
+          "email": "steve@codingthesmartway.com"
+        },
+        {
+          "id": 3,
+          "first_name": "Nann",
+          "last_name": "Smith",
+          "email": "Nann@codingthesmartway.com"
+        }
+      ],
+      "products":[
+        {
+              "id":1,
+              "product_name":"iphone6s",
+              "price":300
+        },
+        {
+            "id":2,
+            "product_name":"nokia",
+            "price":500
+        },
+        {
+            "id":3,
+            "product_name":"Iphone X",
+            "price":700
+        }
+      ]
+  }

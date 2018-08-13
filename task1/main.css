@@ -1,0 +1,23 @@
+main{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+#next,#prev{
+    position: fixed;
+    padding: 16px;
+    font-size: 25px;
+    font-weight: 900;
+    top:42%;
+    color: whitesmoke;
+    background-color: dimgrey;
+
+}
+
+#next:hover,#prev:hover{
+    cursor: pointer;
+}
+
+#next{
+ right:10px;
+}
