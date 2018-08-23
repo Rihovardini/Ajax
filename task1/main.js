@@ -58,16 +58,17 @@ function nextPage(){
             .then((json)=>{
                 createCharackBlocks(json.results);
                 document.querySelector('main').setAttribute('data-count',count);
+                changePageHash(count)
     }).catch((err)=>{
         errorFunction();
     })
 }
 
 function prevPage(){
-
     let count=document.querySelector('main').getAttribute('data-count'),
         el = document.querySelector( '.wrapper' );
         removeChildren(el);
+        count=dataValidation(count)|| count;
     fetch(`https://rickandmortyapi.com/api/character/?page=${--count}`)
         .then((response)=>{
             return response.json();
@@ -75,7 +76,8 @@ function prevPage(){
             .then((json)=>{
                 createCharackBlocks(json.results);
                 document.querySelector('main').setAttribute('data-count',count);
-    }).catch((err)=>{
+                changePageHash(count)
+    }).catch(()=>{
         errorFunction();
     })
 }
@@ -90,3 +92,15 @@ next.addEventListener('click',nextPage);
 
 let prev=document.getElementById("prev");
 prev.addEventListener('click',prevPage);
+
+function changePageHash(data){
+    location.hash=data;
+}
+
+function dataValidation(data){
+     if(data<1){
+        document.querySelector('main').setAttribute('data-count',2);
+        return 2;
+     }
+     
+}
