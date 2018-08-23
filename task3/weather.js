@@ -69,12 +69,9 @@ function createWeatherBlock(data){
 }
 
 function errorData(){
-    const mapHolder=document.getElementById('mapholder'),
-          h1=document.createElement('h1');
+    const mapHolder=document.getElementById('mapholder');
+    mapHolder.innerHTML="<h1>Please,reload the page cause data didn't come</h1>";
     
-    h1.textContent="Please,reload the page cause data didn't come";
-    h1.style.textAlign="center";
-    mapHolder.appendChild(h1);
 }
 function removeChildren(parent){
     parent.parentElement.removeChild(parent);
