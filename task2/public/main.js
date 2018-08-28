@@ -11,7 +11,7 @@ searchButton.addEventListener('click', (e) => {
         })
         .catch(err=>{
             errorFunction();
-            //console.log(err);
+            console.log(err);
         })
 });
 
@@ -37,7 +37,7 @@ function  createTableBodyElems(data){
 }
 
 function createTableHead(data){
-    debugger
+   
     if (document.querySelector("table")){
         return;
     }
@@ -59,18 +59,11 @@ function createTableHead(data){
     table.style="margin: 0 auto";
     thead.appendChild(tr);
     table.appendChild(thead);          
-    // const div=document.createElement('div');
-    //     for(let key in data){
-    //         let p=document.createElement('p');
-    //         p.textContent=`${key}:${data[key]}`;
-    //         div.appendChild(p);
-    //     }
     main.appendChild(table);
 }
 
 function errorFunction(){
     const h1=document.createElement('h1');
     h1.textContent="We haven't got any data from api(((";
-    h1.style.textAlign='center';
     document.body.appendChild(h1);
 }
