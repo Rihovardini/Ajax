@@ -4,7 +4,6 @@ window.onload=function(){
 }
 
 submit.addEventListener ('click', function (e) {
-    // debugger
     e.preventDefault()
     let city = document.getElementById('search').value;
     fetch(`http://api.openweathermap.org/data/2.5/weather?`
