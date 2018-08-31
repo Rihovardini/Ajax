@@ -50,7 +50,9 @@ function nextPage() {
     let count = document.querySelector('main').getAttribute('data-count'),
         el = document.querySelector('.wrapper');
     removeChildren(el);
-    fetch(`https://rickandmortyapi.com/api/character/?page=${++count}`)
+    ++count;
+    count = dataValidation(count) || count;
+    fetch(`https://rickandmortyapi.com/api/character/?page=${count}`)
         .then((response) => {
             return response.json();
         })
@@ -100,6 +102,10 @@ function dataValidation(data) {
     if (data < 1) {
         document.querySelector('main').setAttribute('data-count', 2);
         return 2;
+    }
+    if(data>=25){
+        document.querySelector('main').setAttribute('data-count', 25);
+        return 25;
     }
 
 }
